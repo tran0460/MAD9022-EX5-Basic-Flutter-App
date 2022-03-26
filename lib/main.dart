@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_nav_starter/nav.dart';
 
 //screens
-// import 'package:flutter_nav_starter/screens/first_screen.dart'
-// import 'package:flutter_nav_starter/screens/second_screen.dart'
+import 'package:flutter_nav_starter/screens/first_screen.dart';
+import 'package:flutter_nav_starter/screens/second_screen.dart';
 // import 'package:flutter_nav_starter/screens/third_screen.dart'
 
 void main() {
@@ -28,7 +28,11 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
-  final screens = <Widget>[];
+  final screens = <Widget>[
+    FirstScreen(),
+    SecondScreen(),
+    FirstScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -36,21 +40,12 @@ class _MainPageState extends State<MainPage> {
       appBar: AppBar(
         title: Text('Appbar'),
       ),
-      body: Container(
-        alignment: Alignment.center,
-        child: Text(
-          'Home Screen',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 40,
-          ),
-        ),
-      ),
+      body: screens[currentIndex],
       drawer: NavDrawer(
           currentIndex: currentIndex,
           onTapped: (i) {
             print(i);
-            setState(() => currentIndex = i);
+            setState(() => {currentIndex = i});
           }),
     );
   }

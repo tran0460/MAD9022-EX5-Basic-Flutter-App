@@ -6,6 +6,7 @@ class NavDrawer extends StatefulWidget {
 
   int currentIndex;
   final Function(int) onTapped;
+
   final labels = <String>[
     'Home',
     'Second',
@@ -54,7 +55,6 @@ class _NavDrawerState extends State<NavDrawer> {
               onTap: () {
                 print('tapped $i');
                 widget.onTapped(i);
-                //drawer needs to be removed from history
                 Navigator.of(context).pop();
               },
             ),
