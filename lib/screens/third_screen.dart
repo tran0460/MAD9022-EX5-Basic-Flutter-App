@@ -10,11 +10,13 @@ class ThirdScreen extends StatelessWidget {
       child: Column(
         children: [
           Card(
+            shadowColor: Colors.red,
+            elevation: 6,
             child: Container(
               child: Column(
                 children: [
                   Image(
-                    width: 200,
+                    height: 300,
                     fit: BoxFit.contain,
                     image: AssetImage('images/dog-1.jpg'),
                   ),
@@ -24,11 +26,13 @@ class ThirdScreen extends StatelessWidget {
             ),
           ),
           Card(
+            shadowColor: Colors.amberAccent,
+            elevation: 6,
             child: Container(
               child: Column(
                 children: [
                   Image(
-                    width: 200,
+                    height: 300,
                     fit: BoxFit.contain,
                     image: AssetImage('images/dog-2.jpg'),
                   ),
