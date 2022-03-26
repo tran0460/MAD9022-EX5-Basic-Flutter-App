@@ -4,7 +4,7 @@ import 'package:flutter_nav_starter/nav.dart';
 //screens
 import 'package:flutter_nav_starter/screens/first_screen.dart';
 import 'package:flutter_nav_starter/screens/second_screen.dart';
-// import 'package:flutter_nav_starter/screens/third_screen.dart'
+import 'package:flutter_nav_starter/screens/third_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +31,7 @@ class _MainPageState extends State<MainPage> {
   final screens = <Widget>[
     FirstScreen(),
     SecondScreen(),
-    FirstScreen(),
+    ThirdScreen(),
   ];
 
   @override

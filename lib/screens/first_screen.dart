@@ -7,13 +7,20 @@ class FirstScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: Text(
-        'Son Tran',
-        style: TextStyle(
-          color: Colors.red,
-          fontSize: 40,
-        ),
-      ),
+      child: Container(
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Son Tran',
+            style: TextStyle(
+              color: Colors.red,
+              fontSize: 40,
+            ),
+          ),
+          FlutterLogo(size: 80),
+        ],
+      )),
     );
   }
 }

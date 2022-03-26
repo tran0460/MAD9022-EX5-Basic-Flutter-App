@@ -6,9 +6,37 @@ class ThirdScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.center,
       child: Column(
         children: [
-          Card(),
+          Card(
+            child: Container(
+              child: Column(
+                children: [
+                  Image(
+                    width: 200,
+                    fit: BoxFit.contain,
+                    image: AssetImage('images/dog-1.jpg'),
+                  ),
+                  Text('A very cute dog')
+                ],
+              ),
+            ),
+          ),
+          Card(
+            child: Container(
+              child: Column(
+                children: [
+                  Image(
+                    width: 200,
+                    fit: BoxFit.contain,
+                    image: AssetImage('images/dog-2.jpg'),
+                  ),
+                  Text('Another very cute dog')
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
